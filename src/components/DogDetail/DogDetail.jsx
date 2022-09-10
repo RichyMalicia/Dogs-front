@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import { getDogID } from '../../redux/actions/actionsCreator';
 import NavBar from '../NavBar/NavBar';
+import s from './dogDetail.module.css'
+import LoadingDetails from './LoadingDetail';
+import imagen from './imagen.jpg'
 
 
 export default function DogDetail() {
@@ -10,6 +13,7 @@ export default function DogDetail() {
     const { id } = useParams();
     const data = useSelector(state => state.dogsDetail);
     console.log("DATA", data);
+    const [loadingDetails = true, setLoadingDetails] = useState();
 
     useEffect(()=>{
         dispatch(getDogID(id));             
@@ -19,14 +23,41 @@ export default function DogDetail() {
     
     if(!data) {
         return (
+         <div className={s.container}>
+             {
+                    loadingDetails ? (
+                        <LoadingDetails setLoadingDetails={setLoadingDetails}/>
+                    ) : 
+                    (
+                        <div>
+                            <img src={imagen} alt='background-details' className={s.background}/>
+                            <div className={s.details}>
+                                    <div className={s.title}>
             <>
         <NavBar/>
         <img src='https://previews.123rf.com/images/lightwise/lightwise1508/lightwise150800076/44185374-p%C3%A1gina-de-error-404-no-encontrado-concepto-y-un-s%C3%ADmbolo-de-enlace-roto-o-muerto-como-un-perro-que-em.jpg' alt='not found'/> )
         </>
+        </div>
+        </div>
+        </div>
+                    )}
+    </div>
     )} else if (!data.weightMin){ 
         
     return (
+        <div className={s.container}>
+             {
+                    loadingDetails ? (
+                        <LoadingDetails setLoadingDetails={setLoadingDetails}/>
+                    ) : 
+                    (
+                        <div>
+                            <img src={imagen} alt='background-details' className={s.background}/>
+                            <div className={s.details}>
+                                    <div className={s.title}>
+    
         <>
+        
         <NavBar/> 
         <h3>Name: {data.name && data.name }</h3>
     <p>Weight: {data.weight && data.weight.metric} kgs.</p>
@@ -37,11 +68,27 @@ export default function DogDetail() {
     
         
     </>
+    </div>
+        </div>
+        </div>
+                    )}
+    </div>
     )
+    
     
     
 } else {
     return (
+        <div className={s.container}>
+             {
+                    loadingDetails ? (
+                        <LoadingDetails setLoadingDetails={setLoadingDetails}/>
+                    ) : 
+                    (
+                        <div>
+                            <img src="" alt='background-details' className={s.background}/>
+                            <div className={s.details}>
+                                    <div className={s.title}>
         <>
         <NavBar/>
         <h3>Name: {data.name && data.name }</h3>
@@ -53,6 +100,14 @@ export default function DogDetail() {
     
        
     </>
+    </div>
+        </div>
+        </div>
+                    )}
+    </div>
     )
+    
+    
+    
 }
 }

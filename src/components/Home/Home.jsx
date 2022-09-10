@@ -6,7 +6,7 @@ import NavBar from '../NavBar/NavBar';
 import { cleanDetail, getTemper } from '../../redux/actions/actionsCreator';
 import { useDispatch } from 'react-redux';
 
-import Loading from '../Loading/Loading';
+import Loading from './LoadingHome';
 import SearchBar from '../SearchBar/SearchBar';
 import DogsCards from '../DogCards/DogCards';
 import s from './home.module.css'
