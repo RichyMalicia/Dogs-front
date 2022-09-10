@@ -1,11 +1,12 @@
 import React from 'react';
 import Pagination from '../Pagination/Pagination';
 import Search from '../Search/Search';
+import s from './SearchBar.module.css'
 
 
 function SearchBar() {
       return (
-      <div >
+      <div className={s.container} >
       <Search/>
       <Pagination />
       </div>
