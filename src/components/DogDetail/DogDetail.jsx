@@ -54,23 +54,27 @@ export default function DogDetail() {
                         <div>
                             <img src={imagen} alt='background-details' className={s.background}/>
                             <div className={s.details}>
-                                    <div className={s.title}>
+                                    
     
         <>
         
         <NavBar/> 
-        <h3>Name: {data.name && data.name }</h3>
-    <p>Weight: {data.weight && data.weight.metric} kgs.</p>
-    <p>Height: {data.height && data.height.metric} cms.</p>
-    <p>Temperament: {data.temperament && data.temperament} </p>
-    <p>Life Span: {data.life_span && data.life_span} </p>
+        <div className={s.title}>
+        <h3 className={s.name}>Name: {data.name && data.name }</h3>
+        </div>
+        <div className={s.text}>
+    <p className={s.info}>Weight: {data.weight && data.weight.metric} kgs.</p>
+    <p className={s.info}>Height: {data.height && data.height.metric} cms.</p>
+    <p className={s.info}>Temperament: {data.temperament && data.temperament} </p>
+    <p className={s.info}>Life Span: {data.life_span && data.life_span} </p>
+    </div>
     <img src={data.reference_image_id? `https://cdn2.thedogapi.com/images/${data.reference_image_id}.jpg` : data.name} alt="perro" style={{height: 300}}/>
     
         
     </>
     </div>
         </div>
-        </div>
+        
                     )}
     </div>
     )
@@ -88,21 +92,24 @@ export default function DogDetail() {
                         <div>
                             <img src="" alt='background-details' className={s.background}/>
                             <div className={s.details}>
-                                    <div className={s.title}>
+                                    
         <>
         <NavBar/>
+        <div className={s.title}>
         <h3>Name: {data.name && data.name }</h3>
-    <p>Weight: min {data.weightMin} - max {data.weightMax} kgs.</p>
-    <p>Height: min {data.heightMin} - max {data.heightMax} cms.</p>
-    <p>Temperament: {data.tempers.map((t) => (`${t.name} `) )}</p>
-    <p>Life Span: min {data.life_spanMin} - max {data.life_spanMax}</p>
+        </div>
+        <div className={s.text}>    <p className={s.info}>Weight: min {data.weightMin} - max {data.weightMax} kgs.</p>
+    <p className={s.info}>Height: min {data.heightMin} - max {data.heightMax} cms.</p>
+    <p className={s.info}>Temperament: {data.tempers.map((t) => (`${t.name} `) )}</p>
+    <p className={s.info}>Life Span: min {data.life_spanMin} - max {data.life_spanMax}</p>
+    </div>
     <img src={data.image} alt="perro" style={{height: 300}}/>
     
        
     </>
     </div>
         </div>
-        </div>
+       
                     )}
     </div>
     )
