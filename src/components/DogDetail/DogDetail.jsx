@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import { getDogID } from '../../redux/actions/actionsCreator';
-import NavBar from '../NavBar/NavBar';
+import { Link } from 'react-router-dom';
 import s from './dogDetail.module.css'
 import LoadingDetails from './LoadingDetail';
 import imagen from './imagen.jpg'
@@ -34,7 +34,7 @@ export default function DogDetail() {
                             <div className={s.details}>
                                     <div className={s.title}>
             <>
-        <NavBar/>
+            <Link to='/home'><button className={s.btnH}>Got to Home</button></Link>
         <img src='https://previews.123rf.com/images/lightwise/lightwise1508/lightwise150800076/44185374-p%C3%A1gina-de-error-404-no-encontrado-concepto-y-un-s%C3%ADmbolo-de-enlace-roto-o-muerto-como-un-perro-que-em.jpg' alt='not found'/> )
         </>
         </div>
@@ -58,7 +58,7 @@ export default function DogDetail() {
     
         <>
         
-        <NavBar/> 
+        <Link to='/home'><button className={s.btnH}>Got to Home</button></Link>
         <div className={s.title}>
         <h3 className={s.name}>Name: {data.name && data.name }</h3>
         </div>
@@ -94,7 +94,7 @@ export default function DogDetail() {
                             <div className={s.details}>
                                     
         <>
-        <NavBar/>
+        <Link to='/home'><button className={s.btnH}>Got to Home</button></Link>
         <div className={s.title}>
         <h3>Name: {data.name && data.name }</h3>
         </div>
