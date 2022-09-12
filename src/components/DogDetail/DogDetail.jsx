@@ -34,7 +34,7 @@ export default function DogDetail() {
                             <div className={s.details}>
                                     <div className={s.title}>
             <>
-            <Link to='/home'><button className={s.btnH}>Got to Home</button></Link>
+            <Link to='/home'><button className={s.btnH}>Go to Home</button></Link>
         <img src='https://previews.123rf.com/images/lightwise/lightwise1508/lightwise150800076/44185374-p%C3%A1gina-de-error-404-no-encontrado-concepto-y-un-s%C3%ADmbolo-de-enlace-roto-o-muerto-como-un-perro-que-em.jpg' alt=' '/> )
         </>
         </div>
@@ -58,7 +58,7 @@ export default function DogDetail() {
     
         <>
         
-        <Link to='/home'><button className={s.btnH}>Got to Home</button></Link>
+        <Link to='/home'><button className={s.btnH}>Go to Home</button></Link>
         <div className={s.title}>
         <h3 className={s.name}>Name: {data.name && data.name }</h3>
         </div>
