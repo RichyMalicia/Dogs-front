@@ -52,7 +52,7 @@ export default function DogDetail() {
                     ) : 
                     (
                         <div>
-                            <img src={imagen} alt=' ' className={s.background}/>
+                            <img src={imagen} alt=' ' className={s.img}/>
                             <div className={s.details}>
                                     
     
@@ -68,7 +68,7 @@ export default function DogDetail() {
     <p className={s.info}>Temperament: {data.temperament && data.temperament} </p>
     <p className={s.info}>Life Span: {data.life_span && data.life_span} </p>
     </div>
-    <img src={data.reference_image_id? `https://cdn2.thedogapi.com/images/${data.reference_image_id}.jpg` : data.name} alt=" " style={{height: 300}}/>
+    <img src={data.reference_image_id? `https://cdn2.thedogapi.com/images/${data.reference_image_id}.jpg` : data.name} alt=" " className={s.img}/>
     
         
     </>
@@ -103,7 +103,7 @@ export default function DogDetail() {
     <p className={s.info}>Temperament: {data.tempers.map((t) => (`${t.name} `) )}</p>
     <p className={s.info}>Life Span: min {data.life_spanMin} - max {data.life_spanMax}</p>
     </div>
-    <img src={data.image} alt="perro" style={{height: 300}}/>
+    <img src={data.image} alt="perro" className={s.img}/>
     
        
     </>
