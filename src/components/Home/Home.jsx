@@ -32,10 +32,10 @@ const dispatch = useDispatch()
   }, [temps])
   return (
     <div className={s.container} >
-      <img className={s.img} src="https://static.vecteezy.com/system/resources/previews/006/431/810/non_2x/seamless-dog-pattern-with-paw-prints-cat-foots-texture-pattern-with-doggy-pawprints-dog-texture-hand-drawn-illustration-in-doodle-style-on-white-background-vector.jpg" alt="imagen" />
 
       {loading ? <Loading setLoading={setLoading}/>  :
        <div className={s.content}>
+         <img className={s.img} src="https://static.vecteezy.com/system/resources/previews/006/431/810/non_2x/seamless-dog-pattern-with-paw-prints-cat-foots-texture-pattern-with-doggy-pawprints-dog-texture-hand-drawn-illustration-in-doodle-style-on-white-background-vector.jpg" alt="imagen" />
        <NavBar className={s.navbar} setOrder={setOrder} />    
           <SearchBar />
             <div>

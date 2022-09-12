@@ -6,8 +6,6 @@ export default function LoadingDetails({ setLoadingDetails }){
             setLoadingDetails(false)
         }, 700)
     return(
-        <div className={s.container}>
-            <div className={s.loading}></div>
-        </div>
+        <div className={s.loader}>Loading...</div>
     )
 }

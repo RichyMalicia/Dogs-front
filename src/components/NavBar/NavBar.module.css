@@ -3,9 +3,10 @@
     justify-content: space-around;
     align-items: center;
     height: 60px;
-    background-color: rgba(155, 155, 155, 0.9);
+    background-color: rgba(243, 199, 66, 0.9);
     border-bottom: 2px solid black;
-    
+    position: fixed;
+    width: 100%;
 }
 
 .filters{
