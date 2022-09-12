@@ -132,7 +132,7 @@ function DogCreate() {
     return(
         <div>
           <img src={`https://thumbs.dreamstime.com/b/cuatro-perritos-sobre-bandera-22597409.jpg`} alt='back' className={style.back}/>
-            <Link to='/home'><button className={style.btnH}>Got to Home</button></Link>
+            <Link to='/home'><button className={style.btnH}>Go to Home</button></Link>
 <div className={style.contenedor}>
 <div className={style.cont}>
 <h1 className={style.title}>Dog creator!</h1>
