@@ -30,12 +30,12 @@ export default function DogDetail() {
                     ) : 
                     (
                         <div>
-                            <img src={imagen} alt='background-details' className={s.background}/>
+                            <img src={imagen} alt=' ' className={s.background}/>
                             <div className={s.details}>
                                     <div className={s.title}>
             <>
             <Link to='/home'><button className={s.btnH}>Got to Home</button></Link>
-        <img src='https://previews.123rf.com/images/lightwise/lightwise1508/lightwise150800076/44185374-p%C3%A1gina-de-error-404-no-encontrado-concepto-y-un-s%C3%ADmbolo-de-enlace-roto-o-muerto-como-un-perro-que-em.jpg' alt='not found'/> )
+        <img src='https://previews.123rf.com/images/lightwise/lightwise1508/lightwise150800076/44185374-p%C3%A1gina-de-error-404-no-encontrado-concepto-y-un-s%C3%ADmbolo-de-enlace-roto-o-muerto-como-un-perro-que-em.jpg' alt=' '/> )
         </>
         </div>
         </div>
@@ -52,7 +52,7 @@ export default function DogDetail() {
                     ) : 
                     (
                         <div>
-                            <img src={imagen} alt='background-details' className={s.background}/>
+                            <img src={imagen} alt=' ' className={s.background}/>
                             <div className={s.details}>
                                     
     
@@ -68,7 +68,7 @@ export default function DogDetail() {
     <p className={s.info}>Temperament: {data.temperament && data.temperament} </p>
     <p className={s.info}>Life Span: {data.life_span && data.life_span} </p>
     </div>
-    <img src={data.reference_image_id? `https://cdn2.thedogapi.com/images/${data.reference_image_id}.jpg` : data.name} alt="perro" style={{height: 300}}/>
+    <img src={data.reference_image_id? `https://cdn2.thedogapi.com/images/${data.reference_image_id}.jpg` : data.name} alt=" " style={{height: 300}}/>
     
         
     </>
