@@ -94,7 +94,7 @@ export default function DogDetail() {
                             <div className={s.details}>
                                     
         <>
-        <Link to='/home'><button className={s.btnH}>Got to Home</button></Link>
+        <Link to='/home'><button className={s.btnH}>Go to Home</button></Link>
         <div className={s.title}>
         <h3>Name: {data.name && data.name }</h3>
         </div>
